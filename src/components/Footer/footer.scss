@@ -1,5 +1,8 @@
-@import "../../style/mixins";
-@import "../../style/variables";
+// @import "../../style/mixins";
+// @import "../../style/variables";
+
+@use "../../style/variables" as *;
+@use "../../style/mixins" as *;
 
 .footer {
     background-color: #f9f9f9 !important;

@@ -1,5 +1,8 @@
-@import "../../style/variables";
-@import "../../style/mixins";
+// @import "../../style/variables";
+// @import "../../style/mixins";
+
+@use "../../style/variables" as *;
+@use "../../style/mixins" as *;
 
 .navBar {
     font-family: $font_Funnel;

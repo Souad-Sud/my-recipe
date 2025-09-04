@@ -1,5 +1,8 @@
-@import "../../../style/variables"; 
-@import "../../../style/mixins";
+// @import "../../../style/variables"; 
+// @import "../../../style/mixins";
+
+@use "../../../style/variables" as *;
+@use "../../../style/mixins" as *;
 
 .handCollection {
   margin: 150px 300px;
