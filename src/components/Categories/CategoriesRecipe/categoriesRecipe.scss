@@ -1,0 +1,48 @@
+@import "../../../style/variables"; 
+
+.categories {
+    margin: 200px 300px;
+    &__title {
+        font-size: 2.2rem;
+        margin: 40px 0;
+        font-family: $font_Funnel;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+    }
+    &__container {
+        width: 400px;
+    }
+    &__img {
+        border: 1px solid rgb(233, 214, 214);
+        border-radius: 10px;
+    }
+    &__subTitle {
+        font-size: 2rem;
+        text-align: center;
+        padding: 10px 0;
+    }
+    &__paragraph {
+        padding: 5px;
+        text-align: center;
+        text-align: center;
+    }
+    &__btnContainer {
+        display: flex;
+    }
+
+    &__button {
+        background-color: $section-bg;
+        padding: 10px 30px;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 70px auto;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+}
+

@@ -1,0 +1,66 @@
+@import "../../../style/variables"; 
+
+.handCollection {
+    margin: 150px 300px;
+
+    &__title {
+       font-size: 2.2rem;
+       padding: 10px 0;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 24px;
+    }
+
+    &__card {
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: box-shadow 0.2s ease;
+        width: 100%;
+        height: 100%;
+        &:hover {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+    }
+
+    &__imgContainer {
+        height: 350px;
+        width: 500px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__subtContainer {
+        padding: 40px 0;
+    }
+
+    &__subtitle {
+    padding: 8px 5px;
+    }
+
+    &__link {
+       text-decoration: none;
+       color: black;
+       font-size: 2rem;
+    }
+
+    &__btn {
+        margin: 10px ;
+        padding: 10px 30px;
+        font-size: 1rem;
+        border: none;
+        font-weight: bold;
+        background-color: $section-bg;
+        float: right;
+        border-radius: 16px;
+    }
+}

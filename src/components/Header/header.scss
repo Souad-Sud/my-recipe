@@ -1,0 +1,14 @@
+.header {
+    margin: 20px 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    &__contact {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+}

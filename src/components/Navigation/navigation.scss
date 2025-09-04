@@ -1,0 +1,63 @@
+@import "../../style/variables";
+.navBar {
+    font-family: $font_Funnel;
+    gap: 60px;
+    
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        gap: 30px;
+    }
+    &__item {
+        list-style: none;
+        position: relative;
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 1.2rem;
+        background: none;
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        color: #333;
+            &.active {
+                border-bottom: 5px solid $bg-main-color1;
+                font-weight: bold;
+            }
+    }
+    &__dropdown {
+        display: none;
+        position: absolute;
+        height: 200px;
+        top: 100%;
+        left: 0;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        &.is-open {
+            display: block; 
+        }
+    }
+    &__dropdown li {
+        padding: 5px 3px;
+        &:hover {
+            background-color: $bg-main-color1;
+        }
+     }
+    &__sublink {
+        text-decoration: none;
+        color: black;    
+            &.active {
+                border-bottom: 5px solid $bg-main-color1;
+                font-weight: bold;
+      
+    }
+    }
+
+
+}

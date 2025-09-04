@@ -1,0 +1,22 @@
+.recipePopular {
+    margin: 200px 400px;
+    display: flex;
+    flex-direction: column;    
+    &__title {
+        font-size: 2.2rem;
+        padding: 40px 0;
+    }
+    &__recipeContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    &__recipeContainerItems {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.4rem;
+    }
+}
