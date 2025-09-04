@@ -1,0 +1,30 @@
+@import "variables";
+
+@mixin respond-max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin responsive-video($ratio: 16/9) {
+  position: relative;
+  width: 100%;
+  padding-top: (100% / $ratio); // sets height based on ratio
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+//@include respond-between($breakpoint-custom, $breakpoint-tablet) 
+//@include respond-max($breakpoint-tablet) 

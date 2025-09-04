@@ -62,6 +62,7 @@ export default function RandomRecipe() {
           alt={meal.strMeal}
           width={600}
           height={500}
+          layout="responsive"
           className="randomerecipe__img"
         />
         <div className="randomerecipe__container">
@@ -92,7 +93,7 @@ export default function RandomRecipe() {
           <p>{meal.strInstructions}</p>
 
           {meal.strYoutube && (
-            <div style={{ marginTop: "1rem" }}>
+            <div className="videoWrapper">
               <h2>Video Recipe:</h2>
               <iframe
                 width="560"

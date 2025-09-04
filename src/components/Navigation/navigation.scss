@@ -1,7 +1,33 @@
 @import "../../style/variables";
+@import "../../style/mixins";
+
 .navBar {
     font-family: $font_Funnel;
     gap: 60px;
+    position: relative;
+
+        @include respond-max($breakpoint-mobile) {
+             margin: 0;
+             padding: 0;  
+        }
+
+    &__burger {
+        display: none;
+        border: none;
+        background-color: transparent;
+        color: #c94ba3;
+        cursor: pointer;
+        z-index: 10001;
+
+        &.open {
+            transform: rotate(90deg);
+            transition: transform 0.3s ease;
+        }
+
+           @include respond-max($breakpoint-mobile) {
+                display: block;      
+            }
+    }
     
     &__list {
         display: flex;
@@ -10,11 +36,34 @@
         margin: 0;
         padding: 0;
         gap: 30px;
+        list-style: none;
+         @include respond-max($breakpoint-mobile) {
+              flex-direction: column;
+              position: fixed;
+              top: 0;
+              right: -100%;
+              width: 70%;
+              height: 100vh;
+              background: white;
+              padding-top: 4rem;
+              padding-left: 10px;
+              gap: 1.5rem;
+              transition: right 0.3s ease;
+              z-index: 1000;
+
+                &.open {
+                  right: 0;
+                }     
+          }
     }
     &__item {
-        list-style: none;
         position: relative;
+
+        @include respond-max($breakpoint-mobile) {
+            width: 100%;
+        }
     }
+
     &__link {
         text-decoration: none;
         font-size: 1.2rem;
@@ -28,6 +77,7 @@
                 font-weight: bold;
             }
     }
+
     &__dropdown {
         display: none;
         position: absolute;
@@ -37,27 +87,39 @@
         background: white;
         padding: 20px;
         border-radius: 8px;
+        max-height: 0;
+        overflow: hidden;
+        transition:  max-height 0.3s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            @include respond-max($breakpoint-mobile) {
+                position: static;
+                max-height: 0;
+                transition: max-height 0.3s ease;
+                    &.is-open {
+                        max-height: 500px; 
+                    }
+            }
 
         &.is-open {
             display: block; 
+            max-height: 500px;
         }
     }
+
     &__dropdown li {
         padding: 5px 3px;
         &:hover {
             background-color: $bg-main-color1;
         }
      }
+
     &__sublink {
         text-decoration: none;
         color: black;    
             &.active {
                 border-bottom: 5px solid $bg-main-color1;
                 font-weight: bold;
-      
+            }
     }
-    }
-
-
-}
+}      

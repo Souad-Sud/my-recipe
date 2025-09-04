@@ -1,5 +1,5 @@
 import { RecipData } from "@/data/recipeData";
-import "../recipe.scss";
+import "../recipe.scss"
 
 const RecipSection = () => {
   return (

@@ -4,11 +4,12 @@ import { NavItems } from "@/data/navItems";
 import Link from "next/link";
 import "./navigation.scss";
 import { useState } from "react";
-import { CaretDown, CaretUp } from "@phosphor-icons/react";
+import { CaretDown, CaretUp, List, X } from "@phosphor-icons/react";
 
 const Navbar = () => {
   const [openDropDown, setOpenDropDown] = useState<string | null>(null);
   const [activeClass, setActiveClass] = useState<string>("Home Page");
+  const [mobileMenuOpen, setMobilMenuOpen] = useState<boolean>(false);
 
   const handleToggle = (name: string) => {
     setOpenDropDown(openDropDown === name ? null : name);
@@ -17,11 +18,20 @@ const Navbar = () => {
   const handleLinckClick = (name: string) => {
     setActiveClass(name);
     setOpenDropDown(null);
+    setMobilMenuOpen(false);
   };
 
   return (
     <nav className="navBar">
-      <ul className="navBar__list">
+      <button
+        className={`navBar__burger ${mobileMenuOpen ? "open" : ""}`}
+        onClick={() => setMobilMenuOpen(!mobileMenuOpen)}
+      >
+        {/* <List size={40} /> */}
+        {mobileMenuOpen ? <X size={40} /> : <List size={40} />}
+      </button>
+      {/* <X size={40} /> */}
+      <ul className={`navBar__list ${mobileMenuOpen ? "open" : ""}`}>
         {NavItems.map((item, index) => (
           <li key={index} className="navBar__item">
             {item.children ? (

@@ -1,28 +1,26 @@
 "use client";
-import './header.scss'
+import "./header.scss";
 import Logo from "../Logo";
 // import { useUserContext } from "@/utils/contexts";
 // import { UserContextType } from "@/utils/types";
- 
+
 // import Image from "next/image";
 import Navbar from "../Navigation";
 import Profile from "../ProfilePicture";
 import SearchForm from "../SearchForm";
 const Header = () => {
- 
-
   return (
-    <header className='header'>
+    <header className="header">
       <Logo />
       <Navbar />
-      <div className='header__contact'>
-      <SearchForm />
-      <Profile />
+
+      <div className="header__contact">
+        <SearchForm />
+        <Profile />
       </div>
 
       {/* <Image src= {Logo}  alt="logo"  /> */}
       {/* <img src="/React.png"  height={80}   alt="logo"  />  */}
-      
     </header>
   );
 };

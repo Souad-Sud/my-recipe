@@ -1,22 +1,47 @@
+@import "../../../style/variables";
+@import "../../../style/mixins";
+
 .recipePopular {
     margin: 200px 400px;
     display: flex;
-    flex-direction: column;    
-    &__title {
+    flex-direction: column; 
+       @include respond-max($breakpoint-tablet){
+           display: flex;
+           margin: 0;
+           padding: 0;
+           padding-inline-start: 0;
+       }
+
+     &__title {
         font-size: 2.2rem;
         padding: 40px 0;
+          @include respond-max($breakpoint-tablet){
+             font-size: 1.8rem;
+             text-align: center;
+          }
     }
+
     &__recipeContainer {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         gap: 20px;
+          @include respond-max($breakpoint-tablet){
+              flex-direction: column;
+              gap: 30px;
+          }
     }
+    
     &__recipeContainerItems {
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 1.4rem;
+          @include respond-max($breakpoint-tablet){
+              font-size: 1.2rem;
+          }
     }
+    
 }

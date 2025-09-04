@@ -1,45 +1,96 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
 .recipesection {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;  
     margin: 100px 300px;
+
+      @include respond-max($breakpoint-mobile){
+          margin: 50px 20px;
+          flex-direction: column;
+      }
+      @include respond-between($breakpoint-custom, $breakpoint-tablet){
+          margin: 50px 50px;
+      }
+
     &__title {
         margin-left:120px ;
         padding: 0;
         font-size: 2.2rem;
+            @include respond-max($breakpoint-mobile){
+              margin-left: 0;
+              font-size: 1.8rem;
+              text-align: center;
+              padding: 5px 20px;
+            }
+            @include respond-between($breakpoint-custom, $breakpoint-tablet){
+              font-size: 2.2rem;
+              margin-left: 0;
+            }
     }
 
-    &__flexContainer {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-    }
+        &__flexContainer {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+              @include respond-max($breakpoint-mobile){
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+              }
+              @include respond-between($breakpoint-custom, $breakpoint-tablet){
+                flex-direction: column;
+                gap: 20px;
+              }
+        }
 
-    &__container {
-        width: auto;
-        display: flex;
-        flex-direction: column;        
-    }
+        &__container {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+             @include respond-between($breakpoint-custom, $breakpoint-tablet){
+                width:100%;
+                height: auto;
+             }        
+        }
 
-    &__imgContainer {
-        height: 304px;
-        width: 400px;
-        overflow: hidden;
-    }
-    &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+        &__imgContainer {
+            height: 304px;
+            width: 400px;
+            overflow: hidden;
+              @include respond-max($breakpoint-mobile){
+                  width: 100%;
+                  height: auto;
+              }
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+              @include respond-max($breakpoint-mobile){
+                 width: 100%;
+                 height: auto;
+              }
+              @include respond-between($breakpoint-custom, $breakpoint-tablet){
+                  width: 100%;
+                  height: auto;
+              }
+        }
+
+        &__stars {
+            font-size: 25px;
+            line-height: 1;
+        }
   
-    &__stars {
-        font-size: 25px;
-        line-height: 1;
-    }
-    &__filled {
-       color: rgb(255, 217, 2);
-   }
-    &__empty {
-       color: #ccc;
-   }
+        &__filled {
+            color: rgb(255, 217, 2);
+        }
 
+        &__empty {
+            color: #ccc;
+        }
+            
 }

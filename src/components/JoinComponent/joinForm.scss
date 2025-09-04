@@ -1,10 +1,22 @@
+@import "../../style/mixins";
+@import "../../style/variables";
+
 .joincontainer {
     background-color:#ffd8ca;
     height: 500px;
+      @include respond-max($breakpoint-tablet){
+           margin: 0;
+           padding: 0;
+      }
     &__title{
         font-size: 7rem;
         padding: 20px 0;
         text-align: center;
+            @include respond-max($breakpoint-tablet){
+                font-size: 3rem;
+                padding: 20px 0;
+                text-align: center;
+            }
     }
     &__descContainer {
         text-align: center;
@@ -41,4 +53,5 @@
         font-size: 15px;
         width: 100px;
     }
+    
 }
