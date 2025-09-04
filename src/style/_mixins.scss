@@ -5,17 +5,15 @@
     @content;
   }
 }
-
 @mixin respond-between($min, $max) {
   @media (min-width: $min) and (max-width: $max) {
     @content;
   }
 }
-
 @mixin responsive-video($ratio: 16/9) {
   position: relative;
   width: 100%;
-  padding-top: (100% / $ratio); // sets height based on ratio
+  padding-top: (100% / $ratio); 
 
   iframe {
     position: absolute;
@@ -26,5 +24,3 @@
     border: 0;
   }
 }
-//@include respond-between($breakpoint-custom, $breakpoint-tablet) 
-//@include respond-max($breakpoint-tablet) 
