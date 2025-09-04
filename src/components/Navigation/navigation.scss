@@ -1,5 +1,5 @@
-@use "../../style/variables" as *;
-@use "../../style/mixins" as *;
+@use "../../style/variables" as vars;
+@use "../../style/mixins" as mixins;
 
 .navBar {
     font-family: $font_Funnel;

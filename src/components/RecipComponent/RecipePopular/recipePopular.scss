@@ -1,5 +1,5 @@
-@use "../../../style/variables" as *;
-@use "../../../style/mixins" as *;
+@use "../../../style/variables" as vars;
+@use "../../../style/mixins" as mixins;
 
 .recipePopular {
     margin: 200px 400px;
