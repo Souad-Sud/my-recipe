@@ -13,7 +13,7 @@ const ProfileComponent = () => {
             <div className="profilePage__imgContainer">
               <Image
                 src={item.image}
-                alt=""
+                alt="profil image"
                 height={200}
                 width={200}
                 className="profilePage__image"

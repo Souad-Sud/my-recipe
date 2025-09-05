@@ -1,5 +1,6 @@
 import "./footer.scss";
 import LegalComponent from "./LegalComponent";
+import Image from "next/image";
 import NavbarComponent from "./NavbarComponent";
 import SocialMediaComponent from "./SocialMediaComponent";
 const Footer = () => {
@@ -7,7 +8,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__container">
         <div className="footer__logo">
-          <img src="LogoImg/logorec.png" alt="logo" height={100} width={85} />
+          <Image src="LogoImg/logorec.png" alt="logo" height={100} width={85} />
           <p>
             "On the other hand, we denounce with righteous indignation and
             dislike men who are so beguiled and demoralized by the charms of

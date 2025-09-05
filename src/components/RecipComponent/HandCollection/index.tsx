@@ -1,5 +1,6 @@
 import { RecipDDataCollection } from "@/data/recipeData";
 import "./handCollection.scss";
+import Image from "next/image";
 
 const HandCollection = () => {
   return (
@@ -10,7 +11,7 @@ const HandCollection = () => {
         {RecipDDataCollection.map((item, index) => (
           <div key={index} className="handCollection__card">
             <div className="handCollection__imgContainer">
-              <img
+              <Image
                 src={item.image}
                 alt="recipe image"
                 className="handCollection__img"

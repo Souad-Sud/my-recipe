@@ -1,5 +1,6 @@
 import { RecipDataPopular } from "@/data/recipeData";
 import "./recipePopular.scss";
+import Image from "next/image";
 
 const RecipePopular = () => {
   return (
@@ -11,7 +12,7 @@ const RecipePopular = () => {
         {RecipDataPopular.map((item, index) => (
           <div className="recipePopular__recipeContainerItems" key={index}>
             <div className="recipePopular__recipeImgContainer">
-              <img src={item.image} alt={item.name} />
+              <Image src={item.image} alt={item.name} />
             </div>
             <h3 className="recipePopular__recipeTitle">{item.name}</h3>
           </div>

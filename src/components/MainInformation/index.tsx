@@ -1,10 +1,11 @@
 import "./mainContainer.scss";
+import Image from "next/image";
 
 const MainInformation = () => {
   return (
     <main className="mainInfo">
       <div className="mainInfo__imgContainer">
-        <img src="./bgimg2.jpg" alt="" />
+        <Image src="./bgimg2.jpg" alt="" />
       </div>
       <div className="mainInfo__introContainer">
         <span className="mainInfo__introspan">85% would like this again</span>
