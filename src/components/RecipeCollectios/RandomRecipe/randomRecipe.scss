@@ -119,9 +119,10 @@
         font-size: 40px; 
         color: vars.$bg-main-color3;   
     }
-    .videoWrapper {
-        margin-top: 1rem;
-        @include mixins.responsive-video(); 
-    }
+     .videoWrapper {
+    margin-top: 1rem;
+    @include mixins.responsive-video(16/9);
+  }
+
 
 }
