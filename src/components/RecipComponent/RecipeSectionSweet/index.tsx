@@ -1,5 +1,6 @@
 import { RecipDataSweet } from "@/data/recipeData";
 import "../recipe.scss"
+import Image from "next/image";
 
 const RecipeSectionSweet = () => {
   return (
@@ -9,7 +10,7 @@ const RecipeSectionSweet = () => {
         {RecipDataSweet.map((item, index) => (
           <div className="recipesection__container" key={index}>
             <div className="recipesection__imgContainer">
-              <img
+              <Image
                 src={item.image}
                 alt={item.image}
                 className="recipesection__img"

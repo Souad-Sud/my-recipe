@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer__logo">
           <Image src="LogoImg/logorec.png" alt="logo" height={100} width={85} />
           <p>
-            "On the other hand, we denounce with righteous indignation and
+             &quot;On the other hand, we denounce with righteous indignation and
             dislike men who are so beguiled and demoralized by the charms of
             pleasure of the moment
           </p>

@@ -3,7 +3,7 @@ export interface UserType {
     favouriteCategory: string | null,
     favouritReceipes: string[],
     image: string,
-    email:any
+    email:string | number
 
 }
 

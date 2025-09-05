@@ -1,5 +1,4 @@
 import CategoriesPage from "@/components/Categories/CategoriesPage";
-import Footer from "@/components/Footer";
 import JoinComponent from "@/components/JoinComponent";
 import MainInformation from "@/components/MainInformation";
 import RecipePopular from "@/components/RecipComponent/RecipePopular";
