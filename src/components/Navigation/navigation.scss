@@ -6,7 +6,7 @@
     gap: 60px;
     position: relative;
 
-        @include respond-max($breakpoint-mobile) {
+        @include mixins.respond-max($breakpoint-mobile) {
              margin: 0;
              padding: 0;  
         }
@@ -24,7 +24,7 @@
             transition: transform 0.3s ease;
         }
 
-           @include respond-max($breakpoint-mobile) {
+           @include mixins.respond-max($breakpoint-mobile) {
                 display: block;      
             }
     }
@@ -37,7 +37,7 @@
         padding: 0;
         gap: 30px;
         list-style: none;
-         @include respond-max($breakpoint-mobile) {
+         @include mixins.respond-max($breakpoint-mobile) {
               flex-direction: column;
               position: fixed;
               top: 0;
@@ -59,7 +59,7 @@
     &__item {
         position: relative;
 
-        @include respond-max($breakpoint-mobile) {
+        @include mixins.respond-max($breakpoint-mobile) {
             width: 100%;
         }
     }
@@ -92,7 +92,7 @@
         transition:  max-height 0.3s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-            @include respond-max($breakpoint-mobile) {
+            @include mixins.respond-max($breakpoint-mobile) {
                 position: static;
                 max-height: 0;
                 transition: max-height 0.3s ease;

@@ -3,7 +3,7 @@
 
 .randomerecipe {
     margin: 60px 300px;
-       @include respond-max($breakpoint-tablet){
+       @include mixins.respond-max($breakpoint-tablet){
         margin: 0;
         padding: 0;
        }
@@ -13,7 +13,7 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         margin-bottom: 20px;
-          @include respond-max($breakpoint-mobile){
+          @include mixins.respond-max($breakpoint-mobile){
             margin: 50px 0;
             padding: 0;
             display: flex;
@@ -30,7 +30,7 @@
         border: $bg-main-color2;
         cursor: pointer;
         border-radius: 5px;
-        @include respond-max($breakpoint-mobile){
+        @include mixins.respond-max($breakpoint-mobile){
             width: 200px;
             margin: 20px auto;
         }
@@ -64,7 +64,7 @@
         gap: 40px;
         padding: 20px;
         margin: 20px;
-           @include respond-max($breakpoint-tablet){
+           @include mixins.respond-max($breakpoint-tablet){
             margin: 0;
             padding: 0;
             display: flex;
@@ -88,7 +88,7 @@
     &__subtitle{
         padding: 30px 0;
         font-size: 1.8rem;
-        @include respond-max($breakpoint-mobile){
+        @include mixins.respond-max($breakpoint-mobile){
             padding: 20px ;
         }
     }
@@ -97,14 +97,14 @@
         font-size: 1.8rem;
         padding: 20px 0;
     }
-    @include respond-max($breakpoint-mobile){
+    @include mixins.respond-max($breakpoint-mobile){
             padding: 20px ;
         }
     
     &__list {
         margin: 20px 0 30px 50px;
         font-size: 1.6rem;
-           @include respond-max($breakpoint-mobile){
+           @include mixins.respond-max($breakpoint-mobile){
             font-size: 1rem;
            }
     }

@@ -3,11 +3,11 @@
 
 .handCollection {
   margin: 150px 300px;
-    @include respond-max($breakpoint-tablet){
+    @include mixins.respond-max($breakpoint-tablet){
         margin: 40px;
         padding: 0;
     }
-    @include respond-max($breakpoint-mobile){
+    @include mixins.respond-max($breakpoint-mobile){
         margin: 20px;
         
     }
@@ -20,11 +20,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
         gap: 24px;
-            @include respond-max($breakpoint-tablet){
+            @include mixins.respond-max($breakpoint-tablet){
                 grid-template-columns: 1fr 1fr; 
 
             }
-            @include respond-max($breakpoint-mobile){
+            @include mixins.respond-max($breakpoint-mobile){
                 grid-template-columns: 1fr; 
             }
         }

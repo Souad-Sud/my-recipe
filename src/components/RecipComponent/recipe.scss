@@ -6,11 +6,11 @@
     flex-direction: column;  
     margin: 100px 300px;
 
-      @include respond-max($breakpoint-mobile){
+      @include mixins.respond-max($breakpoint-mobile){
           margin: 50px 20px;
           flex-direction: column;
       }
-      @include respond-between($breakpoint-custom, $breakpoint-tablet){
+      @include mixins.respond-between($breakpoint-custom, $breakpoint-tablet){
           margin: 50px 50px;
       }
 
@@ -18,13 +18,13 @@
         margin-left:120px ;
         padding: 0;
         font-size: 2.2rem;
-            @include respond-max($breakpoint-mobile){
+            @include mixins.respond-max($breakpoint-mobile){
               margin-left: 0;
               font-size: 1.8rem;
               text-align: center;
               padding: 5px 20px;
             }
-            @include respond-between($breakpoint-custom, $breakpoint-tablet){
+            @include mixins.respond-between($breakpoint-custom, $breakpoint-tablet){
               font-size: 2.2rem;
               margin-left: 0;
             }
@@ -35,12 +35,12 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 40px;
-              @include respond-max($breakpoint-mobile){
+              @include mixins.respond-max($breakpoint-mobile){
                 flex-direction: column;
                 gap: 20px;
                 align-items: center;
               }
-              @include respond-between($breakpoint-custom, $breakpoint-tablet){
+              @include mixins.respond-between($breakpoint-custom, $breakpoint-tablet){
                 flex-direction: column;
                 gap: 20px;
               }
@@ -50,7 +50,7 @@
             width: auto;
             display: flex;
             flex-direction: column;
-             @include respond-between($breakpoint-custom, $breakpoint-tablet){
+             @include mixins.respond-between($breakpoint-custom, $breakpoint-tablet){
                 width:100%;
                 height: auto;
              }        
@@ -60,7 +60,7 @@
             height: 304px;
             width: 400px;
             overflow: hidden;
-              @include respond-max($breakpoint-mobile){
+              @include mixins.respond-max($breakpoint-mobile){
                   width: 100%;
                   height: auto;
               }
@@ -70,11 +70,11 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-              @include respond-max($breakpoint-mobile){
+              @include mixins.respond-max($breakpoint-mobile){
                  width: 100%;
                  height: auto;
               }
-              @include respond-between($breakpoint-custom, $breakpoint-tablet){
+              @include mixins.respond-between($breakpoint-custom, $breakpoint-tablet){
                   width: 100%;
                   height: auto;
               }
