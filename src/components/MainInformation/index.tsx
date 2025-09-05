@@ -5,7 +5,7 @@ const MainInformation = () => {
   return (
     <main className="mainInfo">
       <div className="mainInfo__imgContainer">
-        <Image src="./bgimg2.jpg" alt="" />
+        <Image src="/bgimg2.jpg" alt="" height={400} width={400}/>
       </div>
       <div className="mainInfo__introContainer">
         <span className="mainInfo__introspan">85% would like this again</span>

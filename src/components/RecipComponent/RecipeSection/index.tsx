@@ -13,6 +13,8 @@ const RecipSection = () => {
               <Image
                 src={item.image}
                 alt={item.image}
+                height={300}
+                width={400}
                 className="recipesection__img"
               />
             </div>

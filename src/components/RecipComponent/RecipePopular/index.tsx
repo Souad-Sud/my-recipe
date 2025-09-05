@@ -12,7 +12,7 @@ const RecipePopular = () => {
         {RecipDataPopular.map((item, index) => (
           <div className="recipePopular__recipeContainerItems" key={index}>
             <div className="recipePopular__recipeImgContainer">
-              <Image src={item.image} alt={item.name} />
+              <Image src={item.image} alt={item.name} height={250} width={250}/>
             </div>
             <h3 className="recipePopular__recipeTitle">{item.name}</h3>
           </div>

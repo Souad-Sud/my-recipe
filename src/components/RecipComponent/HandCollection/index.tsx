@@ -14,6 +14,8 @@ const HandCollection = () => {
               <Image
                 src={item.image}
                 alt="recipe image"
+                height={300}
+                width={400}
                 className="handCollection__img"
               />
             </div>
