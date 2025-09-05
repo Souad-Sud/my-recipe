@@ -121,7 +121,7 @@
     }
     .videoWrapper {
         margin-top: 1rem;
-        @include responsive-video(); 
+        @include mixins.responsive-video(); 
     }
 
 }
