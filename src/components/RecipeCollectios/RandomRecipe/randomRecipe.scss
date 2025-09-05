@@ -27,7 +27,7 @@
         font-size: 1.2rem;
         color: rgb(101, 106, 134);
         background-color: vars.$bg-main-color1;
-        border: $bg-main-color2;
+        border: vars.$bg-main-color2;
         cursor: pointer;
         border-radius: 5px;
         @include mixins.respond-max(vars.$breakpoint-mobile){
