@@ -2,11 +2,11 @@
 @use "../../style/mixins" as mixins;
 
 .navBar {
-    font-family: $font_Funnel;
+    font-family: vars.$font_Funnel;
     gap: 60px;
     position: relative;
 
-        @include mixins.respond-max($breakpoint-mobile) {
+        @include mixins.respond-max(vars.$breakpoint-mobile) {
              margin: 0;
              padding: 0;  
         }
@@ -24,7 +24,7 @@
             transition: transform 0.3s ease;
         }
 
-           @include mixins.respond-max($breakpoint-mobile) {
+           @include mixins.respond-max(vars.$breakpoint-mobile) {
                 display: block;      
             }
     }
@@ -37,7 +37,7 @@
         padding: 0;
         gap: 30px;
         list-style: none;
-         @include mixins.respond-max($breakpoint-mobile) {
+         @include mixins.respond-max(vars.$breakpoint-mobile) {
               flex-direction: column;
               position: fixed;
               top: 0;
@@ -59,7 +59,7 @@
     &__item {
         position: relative;
 
-        @include mixins.respond-max($breakpoint-mobile) {
+        @include mixins.respond-max(vars.$breakpoint-mobile) {
             width: 100%;
         }
     }
@@ -73,7 +73,7 @@
         cursor: pointer;
         color: #333;
             &.active {
-                border-bottom: 5px solid $bg-main-color1;
+                border-bottom: 5px solid vars.$bg-main-color1;
                 font-weight: bold;
             }
     }
@@ -92,7 +92,7 @@
         transition:  max-height 0.3s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-            @include mixins.respond-max($breakpoint-mobile) {
+            @include mixins.respond-max(vars.$breakpoint-mobile) {
                 position: static;
                 max-height: 0;
                 transition: max-height 0.3s ease;
@@ -110,7 +110,7 @@
     &__dropdown li {
         padding: 5px 3px;
         &:hover {
-            background-color: $bg-main-color1;
+            background-color: vars.$bg-main-color1;
         }
      }
 
@@ -118,7 +118,7 @@
         text-decoration: none;
         color: black;    
             &.active {
-                border-bottom: 5px solid $bg-main-color1;
+                border-bottom: 5px solid vars.$bg-main-color1;
                 font-weight: bold;
             }
     }

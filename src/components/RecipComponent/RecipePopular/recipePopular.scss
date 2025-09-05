@@ -5,7 +5,7 @@
     margin: 200px 400px;
     display: flex;
     flex-direction: column; 
-       @include mixins.respond-max($breakpoint-tablet){
+       @include mixins.respond-max(vars.$breakpoint-tablet){
            display: flex;
            margin: 0;
            padding: 0;
@@ -15,7 +15,7 @@
      &__title {
         font-size: 2.2rem;
         padding: 40px 0;
-          @include mixins.respond-max($breakpoint-tablet){
+          @include mixins.respond-max(vars.$breakpoint-tablet){
              font-size: 1.8rem;
              text-align: center;
           }
@@ -28,7 +28,7 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-          @include mixins.respond-max($breakpoint-tablet){
+          @include mixins.respond-max(vars.$breakpoint-tablet){
               flex-direction: column;
               gap: 30px;
           }
@@ -39,7 +39,7 @@
         flex-direction: column;
         align-items: center;
         font-size: 1.4rem;
-          @include mixins.respond-max($breakpoint-tablet){
+          @include mixins.respond-max(vars.$breakpoint-tablet){
               font-size: 1.2rem;
           }
     }

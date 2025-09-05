@@ -4,25 +4,25 @@
 
 .categories {
     margin: 200px 300px;
-      @include mixins.respond-max($breakpoint-mobile){
+      @include mixins.respond-max(vars.$breakpoint-mobile){
           margin: 0;
           padding: 10px;
       }
     &__title {
         font-size: 2.2rem;
         margin: 40px 0;
-        font-family: $font_Funnel;
+        font-family: vars.$font_Funnel;
     }
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
-            @include mixins.respond-max($breakpoint-mobile){
+            @include mixins.respond-max(vars.$breakpoint-mobile){
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-             @include mixins.respond-max($breakpoint-tablet){
+             @include mixins.respond-max(vars.$breakpoint-tablet){
                 margin: 0;
                 padding: 0;
                 display: flex;
@@ -46,7 +46,7 @@
         padding: 5px;
         text-align: center;
         text-align: center;
-          @include mixins.respond-max($breakpoint-mobile){
+          @include mixins.respond-max(vars.$breakpoint-mobile){
             padding: 10px;
             margin: 10px;
           }
@@ -56,7 +56,7 @@
     }
 
     &__button {
-        background-color: $section-bg;
+        background-color: vars.$section-bg;
         padding: 10px 30px;
         border: none;
         font-size: 1.5rem;

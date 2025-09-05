@@ -4,7 +4,7 @@
 .joincontainer {
     background-color:#ffd8ca;
     height: 500px;
-      @include mixins.respond-max($breakpoint-tablet){
+      @include mixins.respond-max(vars.$breakpoint-tablet){
            margin: 0;
            padding: 0;
       }
@@ -12,7 +12,7 @@
         font-size: 7rem;
         padding: 20px 0;
         text-align: center;
-            @include mixins.respond-max($breakpoint-tablet){
+            @include mixins.respond-max(vars.$breakpoint-tablet){
                 font-size: 3rem;
                 padding: 20px 0;
                 text-align: center;

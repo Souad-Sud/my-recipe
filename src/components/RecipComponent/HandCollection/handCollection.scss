@@ -3,11 +3,11 @@
 
 .handCollection {
   margin: 150px 300px;
-    @include mixins.respond-max($breakpoint-tablet){
+    @include mixins.respond-max(vars.$breakpoint-tablet){
         margin: 40px;
         padding: 0;
     }
-    @include mixins.respond-max($breakpoint-mobile){
+    @include mixins.respond-max(vars.$breakpoint-mobile){
         margin: 20px;
         
     }
@@ -20,11 +20,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr; 
         gap: 24px;
-            @include mixins.respond-max($breakpoint-tablet){
+            @include mixins.respond-max(vars.$breakpoint-tablet){
                 grid-template-columns: 1fr 1fr; 
 
             }
-            @include mixins.respond-max($breakpoint-mobile){
+            @include mixins.respond-max(vars.$breakpoint-mobile){
                 grid-template-columns: 1fr; 
             }
         }
@@ -74,7 +74,7 @@
             font-size: 1rem;
             border: none;
             font-weight: bold;
-            background-color: $section-bg;
+            background-color: vars.$section-bg;
             float: right;
             border-radius: 16px;
         }
