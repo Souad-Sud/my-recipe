@@ -18,14 +18,13 @@
         color: #c94ba3;
         cursor: pointer;
         z-index: 10001;
-
         &.open {
             transform: rotate(90deg);
             transition: transform 0.3s ease;
         }
 
            @include mixins.respond-max(vars.$breakpoint-mobile) {
-                display: block;      
+                display: block; 
             }
     }
     
@@ -43,10 +42,9 @@
               top: 0;
               right: -100%;
               width: 70%;
-              height: 100vh;
+              height: 600px;
               background: white;
-              padding-top: 4rem;
-              padding-left: 10px;
+              padding: 2rem 0 2rem 2rem;
               gap: 1.5rem;
               transition: right 0.3s ease;
               z-index: 1000;
@@ -103,7 +101,7 @@
 
         &.is-open {
             display: block; 
-            max-height: 500px;
+            max-height: 400px;
         }
     }
 

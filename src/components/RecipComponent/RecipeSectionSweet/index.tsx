@@ -13,8 +13,8 @@ const RecipeSectionSweet = () => {
               <Image
                 src={item.image}
                 alt={item.image}
-                height={300}
-                width={400}
+                height={243}
+                width={350}
                 className="recipesection__img"
               />
             </div>

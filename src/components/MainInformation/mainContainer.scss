@@ -16,6 +16,8 @@
       }
 
     &__imgContainer{
+      width: 400px;
+      height: 400px;
        @include mixins.respond-max(vars.$breakpoint-tablet){
           width: 100%;
           max-width: 300px;
@@ -24,7 +26,7 @@
   
     &__imgContainer img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         border-top-left-radius: 40px;    
         border-bottom-left-radius: 40px;

@@ -2,94 +2,93 @@
 @use "../../style/mixins" as mixins;
 
 .recipesection {
-    display: flex;
-    flex-direction: column;  
-    margin: 100px 300px;
-
-      @include mixins.respond-max(vars.$breakpoint-mobile){
-          margin: 50px 20px;
-          flex-direction: column;
-      }
-      @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet){
-          margin: 50px 50px;
-      }
-    &__title {
-        margin-left:120px ;
-        padding: 0;
-        font-size: 2.2rem;
-            @include mixins.respond-max(vars.$breakpoint-mobile){
-              margin-left: 0;
-              font-size: 1.8rem;
-              text-align: center;
-              padding: 5px 20px;
-            }
-            @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet){
-              font-size: 2.2rem;
-              margin-left: 0;
-            }
-    }
-
+      margin: 100px auto;
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+        @include mixins.respond-max(vars.$breakpoint-mobile) {
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+      
         &__flexContainer {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-              @include mixins.respond-max(vars.$breakpoint-mobile){
-                flex-direction: column;
-                gap: 20px;
-                align-items: center;
+            gap: 30px;
+            padding: 20px 0;
+            text-align: center;
+              @include mixins.respond-max(vars.$breakpoint-mobile) {
+                  flex-direction: column;  // keep in row so width is controlled
+                  gap: 20px;
+                  justify-content: center;
               }
-              @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet){
-                flex-direction: column;
-                gap: 20px;
+              @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
+                  flex-direction: row;  // keep in row so width is controlled
+                  gap: 20px;
+                  justify-content: center;
+                  flex-wrap: wrap;
               }
         }
 
         &__container {
-            width: auto;
             display: flex;
             flex-direction: column;
-             @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet){
-                width:100%;
-                height: auto;
-             }        
-        }
-
+            width: auto;
+                @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
+                      width: 100%;
+                      height: auto;
+                }
+        } 
         &__imgContainer {
-            height: 304px;
-            width: 400px;
-            overflow: hidden;
-              @include mixins.respond-max(vars.$breakpoint-mobile){
-                  width: 100%;
-                  height: auto;
-              }
+              width: 350px;
+              height: 243px;
+              flex-shrink: 0;
+              overflow: hidden;
+              border-radius: 12px;
+              margin: 0 auto;
+              flex-shrink: 0;
+                  @include mixins.respond-max(vars.$breakpoint-mobile) {
+                      width: 100%;
+                      max-width: 350px;
+                      height: auto;
+                      aspect-ratio: 350 / 243; // keeps the same shape on mobile
+                      flex-shrink: 0;
+                  }
         }
-
         &__img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-              @include mixins.respond-max(vars.$breakpoint-mobile){
-                 width: 100%;
-                 height: auto;
-              }
-              @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet){
-                  width: 100%;
-                  height: auto;
-              }
+            object-fit: cover;
         }
-
+        &__title {
+            margin-left: 120px;
+            font-size: 2.2rem;
+            padding: 0;
+                @include mixins.respond-max(vars.$breakpoint-mobile) {
+                    font-size: 1.8rem;
+                    text-align: center;
+                    padding: 5px 20px;
+                    margin: 0;
+                }
+                @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
+                    font-size: 2.2rem;
+                    margin-left: 0;
+                }
+        }
         &__stars {
             font-size: 25px;
             line-height: 1;
         }
-  
-        &__filled {
-            color: rgb(255, 217, 2);
-        }
+ 
+  &__filled {
+      color: rgb(255, 217, 2);
+  }
 
-        &__empty {
-            color: #ccc;
-        }
-            
+  &__empty {
+    color: #ccc;
+  }
 }
