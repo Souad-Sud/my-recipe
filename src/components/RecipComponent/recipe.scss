@@ -11,23 +11,19 @@
             margin: 50px auto;
             padding: 0 20px;
         }
-        @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-      
+        
         &__flexContainer {
             display: flex;
             gap: 30px;
             padding: 20px 0;
             text-align: center;
               @include mixins.respond-max(vars.$breakpoint-mobile) {
-                  flex-direction: column;  // keep in row so width is controlled
+                  flex-direction: column;  
                   gap: 20px;
                   justify-content: center;
               }
               @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
-                  flex-direction: row;  // keep in row so width is controlled
+                  flex-direction: row;  
                   gap: 20px;
                   justify-content: center;
                   flex-wrap: wrap;

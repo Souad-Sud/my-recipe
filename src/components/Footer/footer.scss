@@ -8,6 +8,16 @@
         margin: 0;
         padding: 0;
     }
+    @include mixins.respond-max(vars.$breakpoint-customm){
+        margin: 0;
+        padding: 10px;
+    }
+    @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
+       margin: 0;
+       padding: 10px 5px;
+
+      }
+
     &__container {
         display: flex;
         align-items: center; 

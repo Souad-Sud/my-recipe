@@ -23,7 +23,7 @@ export default function CategoriesRecipe({
 
   return (
     <main className="categories">
-      <h2 className="categories__title">Latest Recipes</h2>
+      <h1 className="categories__title">Latest Recipes</h1>
       <div className="categories__grid">
         {visibleCategories.map((cat) => (
           <div key={cat.idCategory} className="categories__container">

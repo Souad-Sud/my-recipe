@@ -11,6 +11,10 @@
         margin: 20px;
         
     }
+      @include mixins.respond-max(vars.$breakpoint-desktop1){
+        margin: 20px;
+        
+    }
     &__title {
         font-size: 2.2rem;
         padding: 10px 0;

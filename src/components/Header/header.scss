@@ -1,24 +1,33 @@
+@use "../../style/variables" as vars;
+@use "../../style/mixins" as mixins;
+
 .header {
-    margin: 20px 200px;
+  margin: 20px 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  @include mixins.respond-between(vars.$breakpoint-custom, vars.$breakpoint-tablet) {
+       margin: 0 10px;
+       padding: 0;
+  }
+  &__contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    gap: 30px;
-    &__contact {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        
-    }
-}
+  }
 
+  @include mixins.respond-max(vars.$breakpoint-customm) {
+    margin: 0 20px;
+  }
+}
 @media (max-width: 768px) {
-    .header {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

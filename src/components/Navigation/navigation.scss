@@ -5,12 +5,10 @@
     font-family: vars.$font_Funnel;
     gap: 60px;
     position: relative;
-
-        @include mixins.respond-max(vars.$breakpoint-mobile) {
-             margin: 0;
-             padding: 0;  
-        }
-
+    @include mixins.respond-max(vars.$breakpoint-mobile) {
+        margin: 0;
+        padding: 0;  
+    }
     &__burger {
         display: none;
         border: none;
