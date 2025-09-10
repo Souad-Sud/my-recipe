@@ -31,16 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <main className="main">
-          {/* <MainInformation /> */}
           <UserConterProvider>
-            {/* <LogInWrapper> */}
-            {children}
-            {/* </LogInWrapper> */}
-          </UserConterProvider>
-        </main>
-        <Footer />
+          <Header />   {/* Navbar inside Header */}
+          <main>{children}</main>
+          <Footer />
+        </UserConterProvider>
       </body>
     </html>
   );

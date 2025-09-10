@@ -75,3 +75,10 @@ import { RecipDataCollectionType, RecipDataPopularType, RecipDataType } from "@/
         image: "/HandCollectionImg/delicious-dessert-millefeuille-Img9.jpg" , link: "Mille feuille dessert", recipe: "Recippe"
      },
 ]
+
+// connected to the user 
+export const Recipes = [
+  { id: 1, title: "Caramel Strawberry Milkshake", image: "/recipes/tajine.jpg" },
+  { id: 2, title: "Fancy Glazed Donuts", image: "/recipes/couscous.jpg" },
+  { id: 3, title: "Chocolate and Banan Jar Cake", image: "/recipes/briouat.jpg" },
+];

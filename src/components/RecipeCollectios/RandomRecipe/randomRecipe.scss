@@ -27,9 +27,9 @@
     &__refresh {
         padding: 10px 40px;
         font-size: 1.2rem;
-        color: rgb(101, 106, 134);
-        background-color: vars.$bg-main-color1;
+        background-color: vars.$bg-form-1;
         border: vars.$bg-main-color2;
+        color: white;
         cursor: pointer;
         border-radius: 5px;
         @include mixins.respond-max(vars.$breakpoint-mobile){

@@ -1,15 +1,16 @@
 export interface UserType {
-    name: string,
-    favouriteCategory: string | null,
-    favouritReceipes: string[],
-    image: string,
-    email:string | number
-
+    id: number;
+    name: string;
+    email: string;
+    image: string;
+    password: string;
+    favorites?: number[],
 }
 
 export interface UserContextType {
     user: UserType | null,
-    setUser: (user:UserType) => void
+    setUser: React.Dispatch<React.SetStateAction<UserType | null>>;
+    // setUser: (user:UserType) => void
 }
 
 export interface NavItemsTyps {

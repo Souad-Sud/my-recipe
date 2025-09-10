@@ -7,7 +7,7 @@ import Logo from "../Logo";
 // import Image from "next/image";
 import Navbar from "../Navigation";
 import Profile from "../ProfilePicture";
-import SearchForm from "../SearchForm";
+import ProfilePicture from "../ProfilePicture";
 const Header = () => {
   return (
     <header className="header">
@@ -15,8 +15,7 @@ const Header = () => {
       <Navbar />
 
       <div className="header__contact">
-        <SearchForm />
-        <Profile />
+        <ProfilePicture />
       </div>
 
       {/* <Image src= {Logo}  alt="logo"  /> */}

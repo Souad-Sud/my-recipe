@@ -6,7 +6,6 @@
       max-width: 1200px;
       display: flex;
       flex-direction: column;
-      text-align: center;
         @include mixins.respond-max(vars.$breakpoint-mobile) {
             margin: 50px auto;
             padding: 0 20px;
@@ -61,7 +60,6 @@
             object-fit: cover;
         }
         &__title {
-            margin-left: 120px;
             font-size: 2.2rem;
             padding: 0;
                 @include mixins.respond-max(vars.$breakpoint-mobile) {
