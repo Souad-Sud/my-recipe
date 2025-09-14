@@ -52,3 +52,8 @@ export interface FooterItemsFollowTyps{
     link: string
 
 }
+
+export interface ProfileCollectionType {
+    image: string,
+    name:string
+}

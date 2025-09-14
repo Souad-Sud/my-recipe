@@ -77,14 +77,14 @@
     &__dropdown {
         display: none;
         position: absolute;
-        height: 200px;
         top: 100%;
         left: 0;
         background: white;
         padding: 20px;
         border-radius: 8px;
-        max-height: 0;
-        overflow: hidden;
+        max-height: none;
+        height: auto;
+        overflow-y: auto;
         transition:  max-height 0.3s ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -96,13 +96,10 @@
                         max-height: 500px; 
                     }
             }
-
         &.is-open {
             display: block; 
-            max-height: 400px;
         }
     }
-
     &__dropdown li {
         padding: 5px 3px;
         &:hover {

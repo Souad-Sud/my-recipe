@@ -8,24 +8,16 @@ import { NavItemsTyps  } from "@/utils/types";
           name: "Recipe Page", link: "/recipe"
      },
      {
-          name: "Categories", link: "/categories", children: [
-               {name: "Beef", link: "/categories/beef"},
-               {name: "Chicken", link: "/categories/chicken"},
-               {name: "Dessert", link: "/categories/dessert"},
-               {name: "Lamb", link: "/categories/lamb"},
-               {name: "Pasta", link: "/categories/pasta"},
-               {name: "Seafood", link: "/categories/seafood"},
-
-          ]
+          // the children are empty array that it will be filed by data from API
+          name: "Categories", link: "/categories", children: [],
      },
      {
-          name: "Elements", link: "/elements"
+          name: "Areas", link: "/elements"
      },
      {
           name: "LogIn", link: "/logIn"
      },
-
-         {
+     {
           name: "Profile", link: "/profile"
      },
  ]

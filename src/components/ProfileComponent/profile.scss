@@ -26,6 +26,7 @@
     &__items {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
            @include mixins.respond-max(vars.$breakpoint-tablet){
               display: flex;
@@ -59,11 +60,54 @@
         font-size: 1rem;
         font-weight: bold;
     }
-    &__btnchgprofil {
-        background-color: vars.$bg-main-color1;
-    }
     &__btndelete{
-       background-color: vars.$section-bg;
+       background-color:red;
+       color: white;
     }
+    &__profEmail {
+        margin: 20px 0;
+    }
+    &__infoContainer {
+        margin: 10px 0;
+    }
+    &__listContainer {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+     &__listContainer li {
+        font-size: 1.2rem;
+        font-weight: bold;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        &:hover {
+            transition: 0.3s;     
+            border-bottom: 2px solid #add8e6;      
+        }
+     }
+     &__collection {
+        display: flex;
+        margin-top: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+     }
+     &__collectionList {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+     }
+       &__collectionList li {
+        font-size: 1.2rem;
+        padding: 0px 0 20px 0;
+
+     }
     
 }
