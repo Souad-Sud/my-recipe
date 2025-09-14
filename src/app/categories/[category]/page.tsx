@@ -1,5 +1,6 @@
 import "./category.scss"
 import React from "react";
+import Image from "next/image";
 
 type Meal = {
   idMeal: string;
@@ -29,7 +30,7 @@ export default async function CategoryPage({ params }: Params) {
       <div className="category__grid">
         {meals.map(meal => (
           <div key={meal.idMeal} className="category__container">
-            <img src={meal.strMealThumb} alt={meal.strMeal} width={200} height={200} />
+            <Image src={meal.strMealThumb} alt={meal.strMeal} width={200} height={200} />
             <h3>{meal.strMeal}</h3>
           </div>
         ))}
