@@ -16,7 +16,7 @@ type MealDetail = {
   strMeal: string;
   strInstructions: string;
   strMealThumb: string;
-  [key: string]: any; // allows dynamic ingredient access
+  [key: string]: string;
 };
 
 export default function Areas() {
