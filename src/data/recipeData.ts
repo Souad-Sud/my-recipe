@@ -78,7 +78,11 @@ import { RecipDataCollectionType, RecipDataPopularType, RecipDataType } from "@/
 
 // connected to the user 
 export const Recipes = [
-  { id: 1, title: "Caramel Strawberry Milkshake", image: "/recipes/tajine.jpg" },
-  { id: 2, title: "Fancy Glazed Donuts", image: "/recipes/couscous.jpg" },
-  { id: 3, title: "Chocolate and Banan Jar Cake", image: "/recipes/briouat.jpg" },
+  { id: 1, title: "Caramel Strawberry Milkshake", image: "/ProfileCollection/img1.jpg" },
+  { id: 2, title: "Fancy Glazed Donuts", image: "/ProfileCollection/img2.jpg" },
+  { id: 3, title: "Chocolate and Banan Jar Cake", image: "/ProfileCollection/img3.jpg" },
+  { id: 4, title: "Fancy Glazed Donuts", image: "/ProfileCollection/img4.jpg" },
+  { id: 5, title: "Chocolate and Banan Jar Cake", image: "/ProfileCollection/img5.jpg" },
+  { id: 6, title: "Fancy Glazed Donuts", image: "/ProfileCollection/img6.jpg" },
+  { id: 7, title: "Chocolate and Banan Jar Cake", image: "/ProfileCollection/img7.jpg" },
 ];

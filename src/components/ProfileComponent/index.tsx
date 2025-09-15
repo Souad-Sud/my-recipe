@@ -5,13 +5,17 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import "./profile.scss";
 import { CallBell, Download, SelectionAll } from "@phosphor-icons/react";
-import { ProfileCollection } from "@/data/profileCollection";
+import { Recipes } from "@/data/recipeData"; // import recipes
 
 const ProfileComponent = () => {
   const { user, setUser } = useUserContext();
   const router = useRouter();
-  // for delete button
   const [message, setMessage] = useState("");
+
+  // filter favorites
+  const favoriteRecipes = user
+    ? Recipes.filter((recipe) => user.favorites.includes(recipe.id))
+    : [];
 
   useEffect(() => {
     if (!user) {
@@ -19,25 +23,17 @@ const ProfileComponent = () => {
     }
   }, [user, router]);
 
-  if (!user) return null; // prevent flicker
+  if (!user) return null;
 
-  // call delete button
   const handleDelete = async () => {
     try {
-      // It’s a route you create yourself inside your Next.js app for backend logic.
       await fetch("/api/delete-profile", {
         method: "DELETE",
-        // That headers block is part of the HTTP request you’re making with fetch.
-        headers: {
-          "content-type": "application/json",
-        },
+        headers: { "content-type": "application/json" },
         body: JSON.stringify({ userId: user.id }),
       });
 
-      // clear user from context
       setUser(null);
-
-      // Display message
       setMessage("Your profile has been deleted");
       setTimeout(() => {
         router.push("/logIn");
@@ -48,11 +44,17 @@ const ProfileComponent = () => {
     }
   };
 
+  const handleDisconnect = () => {
+    setUser(null);
+    router.push("/logIn");
+  };
+
   return (
     <div className="profilePage">
       <div className="profilePage__container">
         <h1 className="profilePage__name">{user.name}</h1>
         <hr />
+
         <div className="profilePage__items">
           <div className="profilePage__imgContainer">
             <Image
@@ -67,12 +69,20 @@ const ProfileComponent = () => {
             <button className="profilePage__btndelete" onClick={handleDelete}>
               Delete Profile
             </button>
+            <button
+              className="profilePage__btndisconnect"
+              onClick={handleDisconnect}
+            >
+              Disconnect
+            </button>
           </div>
         </div>
+
         <div>
           <hr />
           <h3 className="profilePage__profEmail">Email : {user.email}</h3>
           <hr />
+
           <div className="profilePage__infoContainer">
             <ul className="profilePage__listContainer">
               <li>
@@ -89,22 +99,22 @@ const ProfileComponent = () => {
               </li>
             </ul>
           </div>
-          <div className="profilePage__collection">
-            {ProfileCollection.map((item, index) => (
-              <ul key={index} className="profilePage__collectionList">
-                <li>
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    height={300}
-                    width={300}
-                  />
-                </li>
-                <li>{item.name}</li>
-              </ul>
+
+          {/* Show favorites */}
+          <h3 className="profilePage__favoritesTitle">Favorite Recipes</h3>
+          <div className="profilePage__favorites">
+            {favoriteRecipes.map((recipe) => (
+              <div key={recipe.id} className="profilePage__recipeCard">
+                <Image
+                  src={recipe.image}
+                  alt={recipe.title}
+                  width={150}
+                  height={150}
+                />
+                <p>{recipe.title}</p>
+              </div>
             ))}
           </div>
-          {/* <h3>Favorite Categories :</h3> */}
         </div>
 
         {message && <p className="profilePage__message">{message}</p>}

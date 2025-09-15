@@ -12,7 +12,7 @@ import { NavItemsTyps  } from "@/utils/types";
           name: "Categories", link: "/categories", children: [],
      },
      {
-          name: "Areas", link: "/elements"
+          name: "Areas", link: "/areas"
      },
      {
           name: "LogIn", link: "/logIn"

@@ -4,7 +4,7 @@ export interface UserType {
     email: string;
     image: string;
     password: string;
-    favorites?: number[],
+    favorites: number[],
 }
 
 export interface UserContextType {
