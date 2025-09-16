@@ -1,7 +1,17 @@
+@use "../../style/mixins" as mixins;
+@use "../../style/variables" as vars;
+
 .area {
     display: flex;
+    flex-direction: row;
     margin: 100px 50px;
     gap: 2rem;
+        @include mixins.respond-max(vars.$breakpoint-mobile){
+          margin: 0;
+          padding: 10px;
+          display: block;
+        
+      }
     &__side {
         width: 100px;
         display: flex;
@@ -32,18 +42,52 @@
         flex: 1;
     }
     &__contentList {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 200px);
-        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 0 10px;
         list-style: none;
         padding: 0;
+        @include mixins.respond-max(vars.$breakpoint-mobile){
+        // background-color: yellow;
+      }
+    }
+    &__contentList li {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
     }
      &__contentList li button {
         border: none;
         background-color: transparent;
         cursor: pointer;
      }
+     &__flexBox {
+        display: flex;
+        flex-direction: row;
+        @include mixins.respond-max(vars.$breakpoint-mobile){
+            display: flex;
+            flex-direction: row;
+        }
+
+     }
      &__contentListDetail {
         margin-top: 2rem;
+        @include mixins.respond-max(vars.$breakpoint-mobile){
+          margin: 0;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;    
+      } 
      }
+      &__contentListDetail h2 {
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        
+      }
 }

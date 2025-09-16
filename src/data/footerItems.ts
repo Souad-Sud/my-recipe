@@ -24,13 +24,13 @@ import { FooterItemsFollowTyps, FooterItemsLegalTyps, FooterItemsTyps } from "@/
 
  export const FooterItemsFollow:FooterItemsFollowTyps[] = [
      {
-        name: "Facebook", link: "/facebook"
+        name: "Facebook", link: "https://www.facebook.com"
      },
           {
-        name: "Instagram", link: "/instagram"
+        name: "Instagram", link: "https://www.instagram.com"
      },
              {
-        name: "Youtube", link: "/youtube"
+        name: "Youtube", link: "https://www.youtube.com/"
      },
 
 ]

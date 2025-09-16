@@ -48,30 +48,39 @@ import { RecipDataCollectionType, RecipDataPopularType, RecipDataType } from "@/
 
  export const RecipDDataCollection:RecipDataCollectionType[] = [
      {
+      id: 1,
         image: "/HandCollectionImg/cake-img7.jpg", link: "Delicious cakes", recipe: "Recippe"
      },
     {
+       id: 2,
         image: "/HandCollectionImg/cupcakes-img6.jpg", link: "Chocolate Cupcake", recipe: "Recippe"
      },
     {
+       id: 3,
         image: "/HandCollectionImg/eclair-img4.jpg" , link: "Classic french Eclair", recipe: "Recippe"
      },
        {
+          id: 4,
         image: "/HandCollectionImg/fish-img8.png" , link: "Grilled Fish with  lemon", recipe: "Recippe"
      },
        {
+          id: 5,
         image: "/HandCollectionImg/mochi-img5.png" , link: "Orange Mochi", recipe: "Recippe" 
      },
        {
+          id: 6,
         image: "/HandCollectionImg/pretzel-img1.jpg" , link: "German pretzels", recipe: "Recippe"
      },
          {
+             id: 7,
         image: "/HandCollectionImg/sausage-roll-img3.jpg" , link: "Sausage Roll", recipe: "Recippe"
      },
          {
+             id: 8,
         image: "/HandCollectionImg/strawberry-roll-img2.jpg" , link: "Strawberry Roll cake", recipe: "Recippe"
      },
       {
+          id: 9,
         image: "/HandCollectionImg/delicious-dessert-millefeuille-Img9.jpg" , link: "Mille feuille dessert", recipe: "Recippe"
      },
 ]

@@ -32,6 +32,7 @@ export interface RecipDataPopularType {
 }
 
 export interface RecipDataCollectionType {
+    id: number;
     image: string,
     link: string,
     recipe: string
